@@ -1,4 +1,3 @@
-# Wk1-Code-Challenge
 # Week 1 Coding Challenges
 
 This repository contains JavaScript solutions to Week 1 coding challenges . Each challenge is implemented as a separate function and organized into distinct files within the Assignments folder.

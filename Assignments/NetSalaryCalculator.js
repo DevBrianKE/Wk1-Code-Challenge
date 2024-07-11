@@ -1,3 +1,4 @@
+// Function to calculate net salary based on input values
 function calculateNetSalary() {
     // Prompt user for inputs
     let basicSalary = parseFloat(prompt("Enter your basic salary (Ksh):"));
@@ -26,6 +27,7 @@ function calculateNetSalary() {
     console.log("Net Salary: Ksh " + netSalary.toFixed(2));
 }
 
+// Function to calculate PAYE based on gross salary
 function calculatePAYE(grossSalary) {
     let paye = 0;
     if (grossSalary <= 24000) {
@@ -42,6 +44,7 @@ function calculatePAYE(grossSalary) {
     return paye;
 }
 
+// Function to calculate NHIF deductions based on gross salary
 function calculateNHIF(grossSalary) {
     let nhif = 0;
 
@@ -82,6 +85,7 @@ function calculateNHIF(grossSalary) {
     return nhif;
 }
 
+// Function to calculate NSSF deductions based on basic salary
 function calculateNSSF(basicSalary) {
     let nssf = 0;
 
@@ -93,3 +97,6 @@ function calculateNSSF(basicSalary) {
 
     return nssf;
 }
+
+// Call the function to start calculating net salary
+calculateNetSalary();

@@ -81,3 +81,15 @@ function calculateNHIF(grossSalary) {
 
     return nhif;
 }
+
+function calculateNSSF(basicSalary) {
+    let nssf = 0;
+
+    if (basicSalary <= 7000) {
+        nssf = basicSalary * 0.06;
+    } else if (basicSalary <= 36000) {
+        nssf = 420 + (basicSalary - 7000) * 0.06;
+    }
+
+    return nssf;
+}

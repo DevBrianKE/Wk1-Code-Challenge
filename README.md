@@ -43,6 +43,9 @@ The `calculateNetSalary` function computes an individual’s net salary based on
 
 **File:** `netSalaryCalculator.js`
 
+This code is produced based on information from the website: 
+[https://www.aren.co.ke/payroll/taxrates.htm](https://www.aren.co.ke/payroll/taxrates.htm)
+
 **Criteria:** The program correctly calculates the net salary including tax, NHIF, and NSSF deductions.
 
 ## Technologies Used

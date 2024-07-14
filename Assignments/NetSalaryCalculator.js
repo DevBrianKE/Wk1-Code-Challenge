@@ -1,3 +1,14 @@
+/*
+*Net Salary Calculator
+ * This JavaScript program calculates the net salary based on the basic salary and benefits entered by the user.
+ * The calculations are done according to the current PAYE, NHIF, and NSSF tax rates in Kenya as of 2024.
+ 
+
+ * For more infomation click on this w website:
+ * <a href="https://www.aren.co.ke/payroll/taxrates.htm" target="_blank">https://www.aren.co.ke/payroll/taxrates.htm</a>
+ 
+ */
+
 // Function to calculate net salary based on input values
 function calculateNetSalary() {
     // Prompt user for inputs
@@ -100,3 +111,4 @@ function calculateNSSF(basicSalary) {
 
 // Call the function to start calculating net salary
 calculateNetSalary();
+

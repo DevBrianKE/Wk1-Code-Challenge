@@ -56,9 +56,6 @@ This code is produced based on information from the website:
 
 Each challenge is self-contained in its respective JavaScript file. You can run each file individually using Node.js or directly in your browser's console.
 
-## Contributing
-
-Contributions are welcome! If you'd like to improve the solutions or add more challenges, feel free to fork the repository and submit a pull request.
 
 ## Author
 

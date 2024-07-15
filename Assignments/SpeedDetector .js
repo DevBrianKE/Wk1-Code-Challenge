@@ -1,5 +1,5 @@
 function speedDetector() {
-    // Enter the speed of the car
+    // Prompt the user to enter the speed of the car
     let speed = prompt("Enter the speed of the car: ");
     
     // Convert the entered value to an integer
@@ -31,5 +31,5 @@ function speedDetector() {
     }
 }
 
-//Execute the speed detection
+//Call the function to execute the speed detection
 speedDetector();

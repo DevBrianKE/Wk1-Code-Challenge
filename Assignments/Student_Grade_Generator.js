@@ -1,5 +1,5 @@
 function studentGradeGenerator() {
-    // Kindly enter student marks
+    // Prompt the user to enter student marks
     let marks = prompt("Enter student marks (0-100): ");
     
     // Convert the entered value to an integer
@@ -29,5 +29,5 @@ function studentGradeGenerator() {
     console.log(`Grade: ${grade}`);
 }
 
-// Execute the grade generation
+// Call the function to execute the grade generation
 studentGradeGenerator();

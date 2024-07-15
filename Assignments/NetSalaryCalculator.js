@@ -1,19 +1,22 @@
-/*
-*Net Salary Calculator
- * This JavaScript program calculates the net salary based on the basic salary and benefits entered by the user.
- * The calculations are done according to the current PAYE, NHIF, and NSSF tax rates in Kenya as of 2024.
- 
-
- * For more infomation click on this w website:
- * <a href="https://www.aren.co.ke/payroll/taxrates.htm" target="_blank">https://www.aren.co.ke/payroll/taxrates.htm</a>
- 
- */
-
 // Function to calculate net salary based on input values
 function calculateNetSalary() {
-    // Prompt user for inputs
-    let basicSalary = parseFloat(prompt("Enter your basic salary (Ksh):"));
-    let benefits = parseFloat(prompt("Enter your benefits (Ksh):"));
+    //Key in basic Salary and benefits
+    let basicSalaryInput = prompt("Enter your basic salary (Ksh):");
+    let benefitsInput = prompt("Enter your benefits (Ksh):");
+
+    // Validate input for basic salary
+    let basicSalary = parseFloat(basicSalaryInput);
+    if (isNaN(basicSalary) || basicSalary <= 0) {
+        console.log("Invalid input for basic salary. Please enter a valid number.");
+        return;
+    }
+
+    // Validate input for benefits
+    let benefits = parseFloat(benefitsInput);
+    if (isNaN(benefits) || benefits < 0) {
+        console.log("Invalid input for benefits. Please enter a valid number.");
+        return;
+    }
 
     // Calculate gross salary
     let grossSalary = basicSalary + benefits;
@@ -24,7 +27,7 @@ function calculateNetSalary() {
     // Calculate NHIF deductions based on gross pay
     let nhif = calculateNHIF(grossSalary);
 
-    // Calculate NSSF deductions based on pensionable pay
+    // Calculate NSSF deductions based on basic salary
     let nssf = calculateNSSF(basicSalary);
 
     // Calculate net salary
@@ -58,7 +61,6 @@ function calculatePAYE(grossSalary) {
 // Function to calculate NHIF deductions based on gross salary
 function calculateNHIF(grossSalary) {
     let nhif = 0;
-
     if (grossSalary <= 5999) {
         nhif = 150;
     } else if (grossSalary <= 7999) {
@@ -92,23 +94,19 @@ function calculateNHIF(grossSalary) {
     } else if (grossSalary >= 100000) {
         nhif = 1700;
     }
-
     return nhif;
 }
 
 // Function to calculate NSSF deductions based on basic salary
 function calculateNSSF(basicSalary) {
     let nssf = 0;
-
     if (basicSalary <= 7000) {
         nssf = basicSalary * 0.06;
     } else if (basicSalary <= 36000) {
         nssf = 420 + (basicSalary - 7000) * 0.06;
     }
-
     return nssf;
 }
 
-// Call the function to start calculating net salary
+// Calculating net salary
 calculateNetSalary();
-
